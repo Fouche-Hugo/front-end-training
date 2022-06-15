@@ -1,0 +1,102 @@
+.information-section {
+    display: grid;
+    grid-template-areas: 
+    "branch account"
+    "project billing"
+    "key support";
+
+    justify-items: center;
+    justify-content: stretch;
+    gap: 50px 50px;
+
+    margin: 40px 80px;
+}
+
+.information-section .info-part {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    max-width: 600px;
+}
+
+.information-section .info-part img {
+    display: block;
+    max-width: 100px;
+}
+
+.info-part .info-text {
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-part .info-text .titre-info-part {
+    font-weight: bold;
+}
+
+.info-part .info-text a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #4C5FD5;
+}
+
+.info-part .info-text a:hover {
+    text-decoration: underline;
+}
+
+.info-part.info-part-right {
+    justify-self: start;
+}
+
+.info-part.info-part-left {
+    justify-self: end;
+}
+
+.information-section .branch {
+    grid-area: branch;
+}
+
+.information-section .account {
+    grid-area: account;
+}
+
+.information-section .project {
+    grid-area: project;
+}
+
+.information-section .billing {
+    grid-area: billing;
+}
+
+.information-section .key {
+    grid-area: key;
+}
+
+.information-section .support {
+    grid-area: support;
+}
+
+@media screen and (max-width: 750px) {
+    .information-section {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        margin: 40px 40px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .information-section .info-part img {
+        max-width: 75px;
+    }
+}
